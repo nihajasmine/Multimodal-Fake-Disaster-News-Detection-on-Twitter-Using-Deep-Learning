@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pydantic
+pandas
+python-dotenv
+requests
+python-multipart
+torch
+transformers
+tweepy
+spacy
+tensorflow
+mysql-connector-python
+# spacy model needs to be downloaded separately: python -m spacy download en_core_web_sm

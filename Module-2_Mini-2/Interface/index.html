@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweet Analysis Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <nav class="navbar">
+            <button class="nav-btn active" data-view="home">Home</button>
+            <button class="nav-btn" data-view="test">Test</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Home View -->
+        <div id="home-view" class="view active-view">
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <!-- Latest Tweets Section -->
+                <section class="latest-tweets-section">
+                    <button class="section-btn latest-tweets-btn">Latest Tweets</button>
+                    <div class="tweets-container">
+                        <div class="tweet-item">tweet1</div>
+                        <div class="tweet-item">tweet2</div>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <div class="tableau-container">
+                    <iframe
+                        src="https://public.tableau.com/views/Tableau-Dashboard_17671139465990/Sheet1?:showVizHome=no"
+                        width="100%"
+                        height="100%"
+                        frameborder="0"
+                        style="border:none;">
+                    </iframe>
+                </div>
+            </main>
+            
+        </div>
+
+        <!-- Test View -->
+        <div id="test-view" class="view">
+            <div class="test-container">
+                <!-- Input and Prediction Section -->
+                <section class="input-section">
+                    <h2 class="section-heading">Test Prediction</h2>
+                    <div class="input-controls">
+                        <div class="input-buttons">
+                            <button class="input-type-btn active" data-type="text">Text</button>
+                            <button class="input-type-btn" data-type="image">Image</button>
+                        </div>
+                        <div class="input-fields">
+                            <input type="text" id="text-input" class="input-field" placeholder="Enter text..." required>
+                            <input type="file" id="image-input" class="file-input" accept="image/*" style="display: none;">
+                            <label for="image-input" class="file-upload-btn" style="display: none;">
+                                <span class="upload-icon">📷</span>
+                                <span class="upload-text">Upload Image</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="predict-btn">Predict</button>
+                    <!-- Result Display Area -->
+                    <div id="result-container" class="result-container" style="display: none;">
+                        <div class="result-content">
+                            <h3 class="result-title">Prediction Result</h3>
+                            <div id="result-body" class="result-body"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

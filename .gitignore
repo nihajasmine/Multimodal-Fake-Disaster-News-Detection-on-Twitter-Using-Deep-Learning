@@ -1,0 +1,20 @@
+Module-1_Mini-1/DistilBERT_model/
+Module-2_Mini-2/Notebooks/.ipynb_checkpoints/
+Module-2_Mini-2/Data/
+Module-2_Mini-2/Images_Data/
+Module-3_Major/Data/
+# Models
+*.pth
+*.keras
+*.h5
+saved_model/
+
+
+# datasets
+*.csv
+*.zip
+data/
+
+# secrets
+.env
+Module-3_Major/Interface/backend/.env
